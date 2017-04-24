@@ -96,6 +96,10 @@ function Bookshelf(){
 
 	}
 
+	this.reset = function(){
+		this.shelf = new Queue();
+	}
+
 	this.init = function(){
 		var configum = this.shelf.dequeue();
 		configum.render('livro1');
@@ -132,26 +136,27 @@ function Bookshelf(){
 
 		this.init();
 
-
-
-
 	}
 
 
 	this.load = function(pesquisa){
 			
-			var url = "https://www.googleapis.com/books/v1/volumes?q=" + pesquisa;
+		this.reset();
 
-			var currentbookshelf = this;
+		var url = "https://www.googleapis.com/books/v1/volumes?q=" + pesquisa;
 
-			$.get(url)
-				.done(function(data){
-					
-					currentbookshelf.parse(data);
+		var currentbookshelf = this;
 
-				}).fail(function(data){
-					console.log("Error "+data);
-				});
+		$.get(url)
+			.done(function(data){
+				
+				currentbookshelf.parse(data);
+
+			}).fail(function(data){
+
+				console.log('Error ' + data);
+
+			});
 
 
 	}
@@ -159,11 +164,13 @@ function Bookshelf(){
 
 var bookshelf1 = new Bookshelf();
 
+bookshelf1.load("Portugal");
 
-$('#submit').click(function(){
+$('#searchbox').submit(function(event){
 
 	bookshelf1.load($('#search').val());
-
+	event.preventDefault();
+	
 })
 
 
