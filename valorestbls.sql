@@ -1,0 +1,66 @@
+--books
+
+InsERT into BOOKS (ISBN,TITULO,SINOPSE)
+VALUES(12345,'harry potter 1','hp vai para hogwarts');
+
+InsERT into BOOKS (ISBN,TITULO,SINOPSE)
+VALUES(1892374,'harry potter 2','hp cresceu');
+
+InsERT into BOOKS (ISBN,TITULO,SINOPSE)
+VALUES(1999933,'harry potter 3','hp puberdade');
+
+InsERT into BOOKS (ISBN,TITULO,SINOPSE)
+VALUES(11842767,'lord of the rings','frodo sai do shire');
+
+--user
+
+InsERT into USER (IP)
+VALUES('138.79.114.189');
+
+InsERT into USER (IP)
+VALUES('229.61.36.236');
+
+InsERT into USER (IP)
+VALUES('46.4.168.55');
+
+--likes
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(12345,'138.79.114.189',1);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(1892374,'138.79.114.189',0);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(1999933,'138.79.114.189',1);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(11842767,'138.79.114.189',0);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(12345,'229.61.36.236',1);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(1892374,'229.61.36.236',1);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(1999933,'229.61.36.236',1);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(11842767,'229.61.36.236',1);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(12345,'46.4.168.55',0);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(1892374,'46.4.168.55',0);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(1999933,'46.4.168.55',0);
+
+insert into LIKES (ISBN,IP,LIKES)
+VALUES(11842767,'46.4.168.55',1);
+
+
+
+

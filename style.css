@@ -11,12 +11,12 @@
 		}
 
 
- 		
+ 		/*
  		.tamanho{
- 			width: 70%;
+ 			width: 30%;
  			height: 40%;
  		}	
- 		/*
+ 		
  		.tamanho2{
  			width: 77%;
  		}	
@@ -70,7 +70,7 @@
 		    border: 1px solid #a4c3ca;
 		    font: normal 13px 'trebuchet MS', arial, helvetica;
 		    background: #f1f1f1;
-		    border-radius: 50px 3px 3px 50px;
+		    border-radius: 3px 50px 50px 3px;
 		    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);     
 		    float: left;       
 		}
